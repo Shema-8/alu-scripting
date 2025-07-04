@@ -6,7 +6,7 @@ import requests
 def top_ten(subreddit):
 
     headers = {'User-Agent': 'MyAPI/0.0.1'}
-    subreddit_url = f"https://www.reddit.com/r/{subreddit}/hot.json"
+    subreddit_url = "https://www.reddit.com/r/{}.json".format(subreddit) 
     response = requests.get(subreddit_url, headers=headers)
 
     if response.status_code == 200:
